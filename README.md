@@ -294,6 +294,20 @@ name: A workflow for my App
 on: push
 
 jobs:
+  UnitTests:
+    name: Unit Test Build Action
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Unit Tests
+        run: mvn -Dtest=com.napier.sem.MyTest test
+
   Build:
     name: Build and Start Using docker-compose
     runs-on: ubuntu-22.04
@@ -304,7 +318,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'adopt'   
+          distribution: 'adopt'
       - name: Package and Run docker compose
         run: |
           mvn package -DskipTests
@@ -324,7 +338,7 @@ If successful the view logs section should show Successfully connected at the bo
 
 
 
-We deserve a badge
+We deserve a badge (currently failing as one unit test deliberately fails)
 
 
 ```
