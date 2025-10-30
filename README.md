@@ -244,7 +244,7 @@ ENTRYPOINT ["java", "-jar", "semApp.jar"]
 
 We will run both Dockerfiles with docker-compose
 
-Add a file named `docker-compose` to the root of the project
+Add a file named `docker-compose.yml` to the root of the project
 
 ```dockerfile
 version: '3'
