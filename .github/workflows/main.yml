@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'adopt'   
+          distribution: 'adopt'
       - name: Package and Run docker compose
         run: |
           mvn package -DskipTests
