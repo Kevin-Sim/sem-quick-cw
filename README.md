@@ -1,6 +1,6 @@
 # sem-quick-cw
 
-Create a new repository on GitHub
+Create a new repository on GitHub.
 
 ![githubRepo](img/githubRepo.png)
 
