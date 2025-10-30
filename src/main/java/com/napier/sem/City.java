@@ -1,6 +1,8 @@
 package com.napier.sem;
 
-
+/**
+ * Represents a city from the world database
+ */
 public class City {
 
   private long id;
