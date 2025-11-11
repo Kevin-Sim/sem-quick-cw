@@ -236,7 +236,7 @@ ENV MYSQL_ROOT_HOST=%
 Add a Dockerfile in the root of the project for our Java App
 
 ```dockerfile
-FROM openjdk:latest
+FROM amazoncorretto:17
 COPY ./target/semApp.jar /tmp
 WORKDIR /tmp
 ENTRYPOINT ["java", "-jar", "semApp.jar"]
